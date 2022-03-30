@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .SignInGoogle{
+    box-shadow: 1px 1px 1px 1px rgb(197, 196, 196);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px; 
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .SignInGoogle:hover{
+    background-color: rgb(253, 253, 253);
+  }
+ 
+.SignInGoogle p{
+    color: rgb(134, 134, 134);
+}
+    
