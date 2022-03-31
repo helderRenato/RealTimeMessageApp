@@ -1,0 +1,37 @@
+.navBar{
+    border-bottom: 1px inset rgb(238, 238, 238);
+    padding: 20px;
+}
+
+.navBar li{
+    list-style: none;
+}
+
+/*Components*/
+.components{
+}
+
+.myMessage{
+    display: flex;
+    align-items: center;
+    background-color: rgb(164, 178, 245);
+    border-radius: 10px;
+    max-width: fit-content;
+    max-height: fit-content;
+    height: 50px;
+}
+
+.inputText input[type = "text"]{
+    border-radius: 10px;
+    border: 1px inset rgb(151, 151, 151);
+}
+
+#chatRoom{
+    display: flex;
+    padding: 20px;
+    margin: 80px auto 0;
+    box-shadow: 2px 2px 2px 2px rgb(206, 206, 206);
+    height: 500px;
+    width: 800px;
+}
+

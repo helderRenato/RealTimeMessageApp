@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: row;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
   }
   
   .SignInGoogle{
@@ -25,4 +25,12 @@
 .SignInGoogle p{
     color: rgb(134, 134, 134);
 }
-    
+
+.navBar{
+    border-bottom: 1px inset rgb(238, 238, 238);
+    padding: 20px;
+}
+
+.navBar li{
+    list-style: none;
+}
