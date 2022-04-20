@@ -7,21 +7,16 @@ import { useNavigate } from "react-router-dom"
 
 export default function Home(){
     const history = useNavigate()
-    let user
 
-    function Login(){
-        signInWithPopup(auth, googleProvider)
+    async function Login(){
+        await signInWithPopup(auth, googleProvider)
         history('/chat')
     }
 
     return(
         <>
             <header className="navBar">
-                <nav>
-                    <ul>
-                        <li>LITTLE PROJECT #3</li>
-                    </ul>
-                </nav>
+                <div className="title">LITTLE PROJECT #3</div>
             </header>
 
             <div className="container">
