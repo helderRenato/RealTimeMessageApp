@@ -69,7 +69,7 @@ export default function Chat(){
                 </div>
                 
                 <div id="messageSpace">
-                    {loadMessages}
+                    {chat.map( (element) => <div>hoho</div>)}
                     <div className = "myMessage">
                         <img src={userId.photoURL} className="author"></img>
                         <p className="message">hey</p>
