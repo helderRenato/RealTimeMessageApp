@@ -10,10 +10,10 @@ import { async } from "@firebase/util"
 export default function Chat(){
     const history = useNavigate()
     const userId = auth.currentUser
-
     const [message, setMessage] = useState('')
     const [image, setImage] = useState('')
-    const [chat, setChat] = useState()
+    const chat = new Array()
+
     async function LogOut(){
         await auth.signOut()
         history('/')
@@ -26,29 +26,28 @@ export default function Chat(){
             const send = await addDoc(collection(db ,"chat"), {
                 message: message, 
                 imageURL: image, 
-                currentUser: userId.email
+                currentUser: userId.email, 
+                time: new Date().getTime()
             });
         }catch(e){
             console.log(e)
         }
     }
+
     
     useEffect(() => {
         async function getMessage(){
             try{
                 const messages = await getDocs(collection(db ,"chat"))
                 messages.forEach(element => {
-                    console.log(element.data)
+                    chat.push(`${element.id} => ${element.data()}`)
                 });
             }catch(e){
                 console.log(e)
-            }
-            
+            } 
         }
-
         getMessage()
     },[])
-
 
     return(
         <>
@@ -70,6 +69,7 @@ export default function Chat(){
                 </div>
                 
                 <div id="messageSpace">
+                    {loadMessages}
                     <div className = "myMessage">
                         <img src={userId.photoURL} className="author"></img>
                         <p className="message">hey</p>
